@@ -1,6 +1,7 @@
 import React from 'react';
 import Commands from './commands';
 import TaskList from './task-list';
+import UserList from './user-list';
 import AddTaskForm from './add-task-form';
 import AddUserForm from './add-user-form';
 
@@ -32,6 +33,10 @@ export default class Kanban extends React.Component {
         <div>
           <p>Kanban!</p>
           <Commands />
+          <UserList 
+            userList={this.state.userList}
+            deleteUser={this.deleteUser.bind(this)}
+          />
           <AddTaskForm 
             taskList={this.state.todos}
             userList={this.state.userList}
@@ -79,6 +84,16 @@ export default class Kanban extends React.Component {
   addUser(user) {
     this.state.userList.push(user);
     this.setState({userList: this.state.userList});
+  }
+
+  deleteUser(userToDelete) {
+    if(this.state.userList.indexOf(userToDelete) !== -1) {
+
+      this.setState({
+        todos: this.state.todos.filter((todo) => todo.user !== userToDelete),
+        userList: this.state.userList.filter((user) => user !== userToDelete)
+      });
+    }
   }
 
   addTask(task) {
