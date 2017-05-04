@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Kanban from './components/kanban';
 import './App.css';
 

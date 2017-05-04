@@ -39,9 +39,9 @@ export default class AddUserForm extends React.Component {
   checkInputError(newUser) {
   	//if blank input, return error string
     if(!newUser) {
-      return 'Please enter a name'
+      return 'Please enter a name.'
     } else if(this.props.userList.indexOf(newUser) !== -1) {
-      return 'User already exists'
+      return 'User already exists.'
     } else {
       //if there is a user input and it doesnt repeat, return null! 
       return null;
