@@ -33,7 +33,10 @@ export default class Kanban extends React.Component {
           <p>Kanban!</p>
           <Commands />
           <AddTaskForm />
-          <AddUserForm />
+          <AddUserForm 
+            userList={this.state.userList}
+            addUser={this.addUser.bind(this)}
+          />
           {this.state.userList.map((user) =>
             <TaskList 
               tasks={this.state.todos}
@@ -68,7 +71,10 @@ export default class Kanban extends React.Component {
     const taskIndex = this.state.todos.indexOf(task);
     this.state.todos[taskIndex].user = user;
     this.setState({todos: this.state.todos});
+  }
 
-    console.log(this.state.todos)
+  addUser(user) {
+    this.state.userList.push(user);
+    this.setState({userList: this.state.userList});
   }
 }
