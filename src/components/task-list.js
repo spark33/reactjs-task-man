@@ -36,6 +36,7 @@ export default class TaskList extends React.Component {
                     key={task.task}
                     updateTask={this.props.updateTask.bind(this)}
                     toggleTask={this.props.toggleTask.bind(this)}
+                    deleteTask={this.props.deleteTask.bind(this)}
                     changeUser={this.props.changeUser.bind(this)}
                   />
         				)

@@ -1,11 +1,7 @@
 import React from 'react';
 
 export default class UserList extends React.Component {
-
-	constructor(props) {
-		super(props);
-	}
-
+  
   render() {
     //task and action header names. simple component. 
     return (

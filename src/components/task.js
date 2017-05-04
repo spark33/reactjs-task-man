@@ -18,8 +18,14 @@ export default class Task extends React.Component {
         <tr>
 					{this.renderTaskName()}
           {this.renderTaskUser()}
+          <td onClick={() => this.handleDelete()}>X</td>
 				</tr>
     );
+  }
+
+  handleDelete() {
+    const task = this.props.task;
+    this.props.deleteTask(task);
   }
 
   //this function determines how the tasks will be displayed in the table.
