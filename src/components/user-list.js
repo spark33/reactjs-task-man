@@ -7,6 +7,7 @@ export default class UserList extends React.Component {
     return (
         <div>
           <h1>Users on Project</h1>
+          <h3>Project Leader: {this.props.leader}</h3>
           <table>
           <tbody>
           {
@@ -24,6 +25,10 @@ export default class UserList extends React.Component {
   }
 
   handleDelete(user) {
-  	this.props.deleteUser(user);
+  	if(user !== this.props.leader) {
+      this.props.deleteUser(user);
+    } else {
+      alert("Cannot delete project leader")
+    }
   }
 }

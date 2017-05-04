@@ -12,6 +12,7 @@ export default class Kanban extends React.Component {
 
     //set our taskList array in state. this could be a db query if this was full stack.
     this.state = {
+      leader: "Sean",
       taskList: [
         {
           task: "Task 1",
@@ -34,6 +35,7 @@ export default class Kanban extends React.Component {
           <p>Kanban!</p>
           <Commands />
           <UserList 
+            leader={this.state.leader}
             userList={this.state.userList}
             deleteUser={this.deleteUser.bind(this)}
           />
@@ -99,7 +101,6 @@ export default class Kanban extends React.Component {
       });
     }
   }
-
 
 
   // USER FUNCTIONS //
