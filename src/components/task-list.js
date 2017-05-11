@@ -6,10 +6,11 @@ export default class TaskList extends React.Component {
 	constructor(props) {
     super(props);
 
-    this.state = {
-      user: this.props.user,
-      tasks: this.props.tasks
-    }
+    this.state = this.props;
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.state = nextProps;
   }
 
   render() {
@@ -18,13 +19,14 @@ export default class TaskList extends React.Component {
     const filteredTasks = this.state.tasks.filter(function(task) { return task.user === user });
 
     return (
-        <div>
+        <div className="taskList">
         	<h5>{this.state.user}'s Task List</h5>
           <table>
         		<thead>
         			<tr>
         				<th>Task</th>
         				<th>User</th>
+                <th></th>
         			</tr>
         		</thead>
         		<tbody>

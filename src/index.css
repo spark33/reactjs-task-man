@@ -1,12 +1,50 @@
-body {
-  margin: 0;
+body
+{
+  font-family: 'Avenir', sans-serif;
   padding: 0;
-  font-family: sans-serif;
+  margin: 0;
 }
 
-body *
+#sidebar
 {
-	margin: 0 auto;
-	padding: 5px;
-	/*border: 1px dotted grey;*/
+	border-radius: 5px;
+	border: 1px dotted grey;
+	background: #eef7fa	;
+	padding: 3%;
+	width: 30%;
+	color: #334045;
+	box-sizing: border-box;
+	display: inline-block;
 }
+
+#taskLists
+{
+	width: 70%;
+	box-sizing: border-box;
+	padding: 3%;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 5px;
+	border: 1px dotted grey;
+}
+
+.taskList
+{
+	width: 30%;
+	padding: 1%;
+	display: inline-block;
+	text-align: center;
+}
+
+.taskList table
+{
+	width: 100%;
+	table-layout: fixed;
+}
+
+input,
+select
+{
+	padding: 1%;
+}
+

@@ -25,6 +25,8 @@ export default class Task extends React.Component {
 
   handleDelete() {
     const task = this.props.task;
+    console.log("at handle level:")
+    console.log(task);
     this.props.deleteTask(task);
   }
 

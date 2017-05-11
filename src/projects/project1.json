@@ -1,0 +1,16 @@
+{
+  "name": "Independent Study Project",
+  "leader": "Sean",
+  "taskList": [{
+      "task": "Task 1",
+      "user": "Sean",
+      "isCompleted": false
+    },
+    {
+      "task": "Task 2",
+      "user": "Raja",
+      "isCompleted": false
+    }
+  ],
+  "userList": ["Sean", "Raja", "David"]
+}
